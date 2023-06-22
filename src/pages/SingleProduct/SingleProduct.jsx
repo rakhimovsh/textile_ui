@@ -1,5 +1,6 @@
 import ProductInfo from "src/pages/SingleProduct/components/ProductInfo/ProductInfo.jsx";
 import Breadcrumb from "src/pages/SingleProduct/components/Breadcrumb/Breadcrumb.jsx";
+import RecommendedProducts from "src/pages/SingleProduct/components/RecommendedProducts/RecommendedProducts.jsx";
 
 
 const SingleProduct = () => {
@@ -8,6 +9,7 @@ const SingleProduct = () => {
         <>
             <Breadcrumb/>
             <ProductInfo/>
+            <RecommendedProducts/>
         </>
     )
 }

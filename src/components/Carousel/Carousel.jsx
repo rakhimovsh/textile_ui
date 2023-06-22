@@ -1,4 +1,7 @@
 import {useEffect, useState, useRef} from "react";
+
+import {ReactComponent as RightIcon} from "src/assets/images/right-icon.svg";
+import {ReactComponent as LeftIcon} from "src/assets/images/left-icon.svg";
 import './Carousel.css'
 
 const Carousel = ({images= []}) =>{
@@ -51,8 +54,7 @@ const Carousel = ({images= []}) =>{
         }
     };
     return (
-        <div>
-            <h2 className="header">Image Carousel</h2>
+        <div className='carousel__container'>
             <div
                 className="selected-image"
                 style={{ backgroundImage: `url(${selectedImage?.url})` }}
@@ -76,13 +78,13 @@ const Carousel = ({images= []}) =>{
                     className="carousel__button carousel__button-left"
                     onClick={handleLeftClick}
                 >
-                    Prev
+                    <LeftIcon/>
                 </button>
                 <button
                     className="carousel__button carousel__button-right"
                     onClick={handleRightClick}
                 >
-                    Next
+                    <RightIcon/>
                 </button>
             </div>
         </div>

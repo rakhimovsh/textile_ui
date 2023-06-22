@@ -1,0 +1,24 @@
+.recommended-products {
+    padding: 70px 0 300px;
+}
+
+.recommended-products__title {
+    margin-bottom: 27px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.recommended-products__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(317px, 1fr));
+    justify-items: center;
+    row-gap: 20px;
+}
+
+
+@media screen and (max-width: 670px) {
+    .recommended-products__list {
+        grid-template-columns: repeat(auto-fill, minmax(173px, 1fr));
+    }
+}

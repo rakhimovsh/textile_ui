@@ -1,6 +1,5 @@
-import './ProductsList.css'
 import ProductItem from "src/components/ProductItem/ProductItem.jsx";
-import Breadcrumb from "src/pages/Products/components/Breadcrumb/Breadcrumb.jsx";
+import './ProductsList.css'
 
 
 
