@@ -1,0 +1,44 @@
+
+.phone-input__label{
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.phone-input__wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 277px;
+    border-bottom: 1px solid #E1E1E1;
+
+}
+
+.phone-input__wrapper input{
+    padding: 9px 0 12px;
+    outline: none;
+    border: none;
+}
+
+.phone-input__wrapper input::placeholder{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    opacity: 0.2;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.phone-input__wrapper input::-webkit-outer-spin-button,
+.phone-input__wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.phone-input__wrapper input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.phone-input__mask{
+    padding-right: 25px;
+    margin-right: 8px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}

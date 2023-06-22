@@ -1,0 +1,62 @@
+.about{
+    padding: 140px 0;
+}
+
+.about__title{
+    margin-bottom: 36px;
+    font-family: 'Pliska';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 50px;
+}
+
+.about__arrow-icon {
+    margin-left: 17px;
+}
+
+.about__arrow-icon path{
+    stroke: var(--black) ;
+}
+
+.about__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__heading{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: revert;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.about__desc{
+    width: 535px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.about__heading-wrapper{
+    margin-bottom: 40px;
+}
+
+.about__product-info{
+    display: flex;
+    gap: 72px;
+}
+
+.about__product-info h3 {
+    font-size: 64px;
+    line-height: 76px;
+    font-weight: 400;
+}
+
+.about__product-info p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.67;
+    text-align: center;
+}

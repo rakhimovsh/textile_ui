@@ -1,0 +1,58 @@
+@import "fonts.css";
+
+
+:root {
+    --bg-color: #3A463C;
+    --white: #ffffff;
+    --black: #000000;
+    --light-green: #E5F187;
+    --font: "SF Pro Display"
+}
+
+*, *:before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font), sans-serif;
+}
+
+body, html, #root {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+main {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1360px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,41 @@
+.contact {
+    padding: 100px 0;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact__main h2 {
+    max-width: 567px;
+    margin-bottom: 17px;
+    font-family: 'Pliska';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 40px;
+}
+
+.contact__main p {
+    max-width: 447px;
+    margin-bottom: 40px;
+}
+
+.contact__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 42px;
+}
+
+.contact__map a{
+    width: 100%;
+    height: 100%;
+}
+.contact__map-image{
+    width: 100%;
+    height: 100%;
+    background-image: url("src/assets/images/map.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}

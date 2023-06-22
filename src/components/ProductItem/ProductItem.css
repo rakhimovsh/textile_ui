@@ -1,0 +1,30 @@
+.products-item h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.products-item p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.products-item img{
+    transition: all 0.3s ease;
+}
+.products-item img:hover{
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 670px) {
+    .products-item img, products-item{
+        width: 173px
+    }
+
+    .products-item h4{
+        width: 173px;
+        font-size: 13px;
+    }
+}

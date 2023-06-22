@@ -1,0 +1,17 @@
+.products-list_{
+    padding-bottom: 100px;
+}
+
+.products-list_ .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(317px, 1fr));
+    justify-items: center;
+    row-gap: 20px;
+}
+
+
+@media screen and (max-width: 670px) {
+    .products-list_ .grid {
+        grid-template-columns: repeat(auto-fill, minmax(173px, 1fr));
+    }
+}

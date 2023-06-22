@@ -1,0 +1,10 @@
+.breadcrumb{
+    padding: 40px 0 30px;
+}
+
+.breadcrumb a{
+    opacity: 0.3;
+}
+.breadcrumb a svg{
+    margin-right: 10px;
+}

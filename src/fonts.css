@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Pliska';
+    font-style: italic;
+    font-weight: 400;
+    src: url("./assets/fonts/pliska.italic.woff") format("woff"),
+    url("./assets/fonts/pliska.italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/SFPRODISPLAYREGULAR.woff") format("woff"),
+    url("./assets/fonts/SFPRODISPLAYREGULAR.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/SFPRODISPLAYMEDIUM.woff") format("woff"),
+    url("./assets/fonts/SFPRODISPLAYMEDIUM.ttf") format("truetype");
+}

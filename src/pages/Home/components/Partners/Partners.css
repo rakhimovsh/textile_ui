@@ -1,0 +1,19 @@
+.partners{
+    padding: 100px 0;
+}
+
+.partners__title{
+    margin-bottom: 42px;
+    font-family: 'Pliska';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 50px;
+}
+
+.partners__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+}

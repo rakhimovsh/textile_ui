@@ -1,0 +1,82 @@
+.header {
+    padding: 26px 0;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.header.active {
+    background-color: var(--white) !important;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 24px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__nav div {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list.active li, .nav-list.active .header__link {
+    color: var(--black) !important;
+}
+.nav-list.active .header__link:after{
+    background-color: var(--black) !important;
+}
+
+.nav-list li {
+    color: var(--white);
+    font-size: 19px;
+}
+
+.header__link {
+    display: inline-block;
+    position: relative;
+    color: var(--white);
+}
+
+.header__link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.header__link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.black-dots path {
+    stroke: var(--black);
+    fill: var(--black);
+}
