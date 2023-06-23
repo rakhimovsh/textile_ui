@@ -38,12 +38,14 @@
 .nav-list {
     display: flex;
     gap: 15px;
+    margin-left: 29px;
 }
 
 .nav-list.active li, .nav-list.active .header__link {
     color: var(--black) !important;
 }
-.nav-list.active .header__link:after{
+
+.nav-list.active .header__link:after {
     background-color: var(--black) !important;
 }
 
@@ -79,4 +81,19 @@
 .black-dots path {
     stroke: var(--black);
     fill: var(--black);
+}
+
+.catalog-icon {
+    margin-right: 6px;
+}
+
+.header__btn-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1040px) {
+    .nav-list {
+        display: none;
+    }
 }

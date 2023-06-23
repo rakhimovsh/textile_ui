@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
-import './Header.css'
 import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as DotMenu} from 'src/assets/images/dot-menu.svg'
 import {ReactComponent as Logo} from 'src/assets/images/logo.svg'
 import {ReactComponent as LogoBlack} from 'src/assets/images/logo-black.svg'
+import {ReactComponent as HamburgerMenu} from "src/assets/images/hamburger-icon.svg";
+import './Header.css'
 
 const Header = ({lightTheme= false}) => {
     const [navbar, setNavbar] = useState(lightTheme)
@@ -29,7 +30,7 @@ const Header = ({lightTheme= false}) => {
                 </Link>
                 <nav className='header__nav'>
                     <div>
-                        <Button color={navbar ? 'black': 'white'}><DotMenu className={navbar ? 'black-dots': ''}/> Каталог</Button>
+                        <Button color={navbar ? 'black': 'white'}><DotMenu className={ navbar ? 'catalog-icon black-dots': 'catalog-icon'}/> Каталог</Button>
                         <ul className={`nav-list${navbar ? ' active': ''}`}>
                             <li><Link className='header__link' to='/categories'>О компании</Link></li>
                             <li><Link className='header__link' to='/categories'> Сотрудничество</Link></li>
@@ -37,7 +38,10 @@ const Header = ({lightTheme= false}) => {
                             <li><Link className='header__link' to='/categories'>Контакты</Link></li>
                         </ul>
                     </div>
-                    <Button color={navbar ? 'black': 'white'}>+998 73 543-22-05</Button>
+                   <div className='header__btn-wrapper'>
+                       <Button color={navbar ? 'black': 'white'}>+998 73 543-22-05</Button>
+                       <Button><HamburgerMenu/></Button>
+                   </div>
                 </nav>
             </div>
         </header>
