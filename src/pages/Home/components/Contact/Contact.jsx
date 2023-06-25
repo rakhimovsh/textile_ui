@@ -1,12 +1,26 @@
+import axios from "axios";
 import Input from "src/components/Input/Input";
 import PhoneInput from "src/components/PhoneInput/PhoneInput";
-import Button from "src/components/Button/Button.jsx";
 
+import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as ArrowRight} from "src/assets/images/arrow-right.svg";
+import {API} from "src/config/config.js";
 import './Contact.css'
 
 
 const Contact = () => {
+
+    const handleSubmit = async (evt) => {
+        evt.preventDefault()
+        const {name, phone_number, text} = evt.target.elements
+        const request = {
+            name: name.value,
+            phone_number: phone_number.value,
+            text: text.value
+        }
+        const data = await axios.post(API+ '/applications', request)
+        console.log(data.data)
+    }
     return (
         <section className='contact'>
             <div className="container contact__container">
@@ -15,10 +29,10 @@ const Contact = () => {
                         Оставьте свой контакт, и мы вам перезвоним
                     </h2>
                     <p>у нас есть бесплатные консультации от экспертов, чтобы ответить на ваши вопросы</p>
-                    <form className='contact__form'>
-                        <Input label='Имя:' placeholder='Ваше имя'/>
-                        <PhoneInput label='Номер телефона:' placeholder='90 123 45 67'/>
-                        <Input label='Комментарий:' placeholder='добавьте свой комментарий'/>
+                    <form className='contact__form' onSubmit={handleSubmit}>
+                        <Input name='name' label='Имя:' placeholder='Ваше имя'/>
+                        <PhoneInput name='phone_number' label='Номер телефона:' placeholder='90 123 45 67'/>
+                        <Input name='text' label='Комментарий:' placeholder='добавьте свой комментарий'/>
                         <div>
                             <Button color='black'>отправить <ArrowRight className='submit-icon'/></Button>
                         </div>

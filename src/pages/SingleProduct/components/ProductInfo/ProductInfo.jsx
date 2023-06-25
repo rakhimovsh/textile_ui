@@ -14,7 +14,6 @@ const ProductInfo = () => {
     const {productId} = useParams()
     const [images, setImages] = useState();
     const {data} = useFetch('/products/' + productId)
-    console.log(data)
 
     useEffect(() => {
         setImages(
@@ -24,7 +23,6 @@ const ProductInfo = () => {
             }))
         );
     }, []);
-    console.log(images)
     return (
         <section>
             <div className='container product-info__container'>
