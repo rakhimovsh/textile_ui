@@ -1,16 +1,17 @@
+import {useNavigate} from "react-router-dom";
 import './ProductItem.css'
-import ProductImage from 'src/assets/images/product-image.jpg'
 
-const ProductItem = () => {
+const ProductItem = ({product}) => {
+    const navigate = useNavigate()
     return (
-        <div className='products-item'>
-            <img src={ProductImage} alt='product image'/>
+        <div className='products-item' onClick={() => navigate('/product/' + product?.id)}>
+            <img src={product?.image_1} alt='product image'/>
             <div>
                 <h4>
-                    Ткани для платьев и рубашек
+                    {product?.name}
                 </h4>
                 <p>
-                    $50 / 1m²
+                    ${product?.price} / 1m²
                 </p>
             </div>
         </div>

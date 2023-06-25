@@ -1,10 +1,12 @@
-import './Contact.css'
 import Input from "src/components/Input/Input";
 import PhoneInput from "src/components/PhoneInput/PhoneInput";
-import Map from 'src/assets/images/map.png'
+import Button from "src/components/Button/Button.jsx";
+
+import {ReactComponent as ArrowRight} from "src/assets/images/arrow-right.svg";
+import './Contact.css'
 
 
-const Contact = () =>{
+const Contact = () => {
     return (
         <section className='contact'>
             <div className="container contact__container">
@@ -17,6 +19,9 @@ const Contact = () =>{
                         <Input label='Имя:' placeholder='Ваше имя'/>
                         <PhoneInput label='Номер телефона:' placeholder='90 123 45 67'/>
                         <Input label='Комментарий:' placeholder='добавьте свой комментарий'/>
+                        <div>
+                            <Button color='black'>отправить <ArrowRight className='submit-icon'/></Button>
+                        </div>
                     </form>
                 </div>
                 <div className="contact__map">

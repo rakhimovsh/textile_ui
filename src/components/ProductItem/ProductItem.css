@@ -1,3 +1,7 @@
+.products-item{
+    cursor: pointer;
+}
+
 .products-item h4{
     font-style: normal;
     font-weight: 400;

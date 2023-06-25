@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import {API} from "src/config/config.js";
 
-function useFetch(url, method = 'GET', requestData = null) {
+function useFetch(path, method = 'GET', requestData = null) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      const axiosConfig = { method, url };
+      const axiosConfig = { method, url: API + path };
       if (requestData) {
         axiosConfig.data = requestData;
       }
@@ -24,7 +25,7 @@ function useFetch(url, method = 'GET', requestData = null) {
     }
 
     fetchData();
-  }, [url, method, requestData]);
+  }, [path, method, requestData]);
 
   return { data, loading, error };
 }

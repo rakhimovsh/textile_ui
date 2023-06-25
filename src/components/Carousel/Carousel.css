@@ -11,14 +11,15 @@
 .carousel {
     /*position: relative;*/
 }
-.carousel__container{
+
+.carousel__container {
     position: relative;
 }
 
 .carousel__images {
     display: flex;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 .carousel__image-selected {
@@ -32,6 +33,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .carousel__button {
@@ -48,4 +50,20 @@
 
 .carousel__button-right {
     right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .selected-image {
+        height: 508px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .selected-image {
+        height: 288px;
+    }
+    .carousel__image{
+        min-width: 86px;
+        height: 58px;
+    }
 }

@@ -7,7 +7,7 @@ const Breadcrumb = () =>{
     return (
         <section className='container'>
             <div className='breadcrumb'>
-                <Link to='/'><HomeIcon/>Главная  </Link> | <Link to='products'>Материалы</Link> | Ткани для платьев и рубашек
+                <Link to='/'><HomeIcon/>Главная  </Link> | <Link to='/products'>Материалы</Link> | Ткани для платьев и рубашек
             </div>
         </section>
     )

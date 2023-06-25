@@ -92,8 +92,29 @@
     align-items: center;
 }
 
+.header__btn-wrapper button:nth-child(2){
+    display: none;
+}
+
+.blackHamburger rect{
+    fill: var(--black);
+}
+
 @media screen and (max-width: 1040px) {
     .nav-list {
+        display: none;
+    }
+
+    .header__btn-wrapper button:nth-child(2){
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .header__nav button:nth-child(1){
+        display: none;
+    }
+    .header__btn-wrapper button:nth-child(1){
         display: none;
     }
 }

@@ -1,0 +1,1 @@
+export const API = import.meta.env.VITE_API || 'https://textile01.pythonanywhere.com/home'

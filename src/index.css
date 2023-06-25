@@ -51,8 +51,14 @@ ul {
 
 .container {
     width: 100%;
-    max-width: 1360px;
-    padding: 0 10px;
+    max-width: 1380px;
+    padding: 0 20px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 10px;
+    }
 }
 

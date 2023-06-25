@@ -1,25 +1,30 @@
 import {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 import Carousel from "src/components/Carousel/Carousel.jsx";
 import Button from "src/components/Button/Button.jsx";
-
 import {ReactComponent as ArrowRight} from "src/assets/images/arrow-right.svg";
 import {ReactComponent as CarIcon} from "src/assets/images/car-icon.svg";
 import {ReactComponent as ShieldIcon} from "src/assets/images/shield-icon.svg";
 import {ReactComponent as ListIcon} from "src/assets/images/list-icon.svg";
 import './ProductInfo.css'
+import useFetch from "src/hooks/useFetch.js";
 
 
 const ProductInfo = () => {
+    const {productId} = useParams()
     const [images, setImages] = useState();
+    const {data} = useFetch('/products/' + productId)
+    console.log(data)
 
     useEffect(() => {
         setImages(
-            Array.from(Array(10).keys()).map((id) => ({
-                id,
-                url: `https://picsum.photos/1000?random=${id}`
+            Array.from(Array(5).keys()).map((id) => ({
+                id: id + 1,
+                url: `image_${id + 1}`
             }))
         );
     }, []);
+    console.log(images)
     return (
         <section>
             <div className='container product-info__container'>
@@ -27,15 +32,14 @@ const ProductInfo = () => {
                     <Carousel images={images}/>
                 </div>
                 <div className='product-info__desc'>
-                    <h2>Ткани для платьев и рубашек</h2>
+                    <h2>{data?.name}</h2>
                     <ul className='product-info__list'>
-                        <li>Состав: полиэстер 100%</li>
-                        <li>Плотность: 300 г/м²</li>
-                        <li>Ширина: 150 см</li>
-                        <li>Длина за кг: 2.2 м/кг</li>
-                        <li>Назначение: Для мужской, женской и детской коллекции весна и осень, верхней одежды</li>
-                        <li>Минимальный заказ: Товары из наличия — от 1 рулона; товары по заказу — от 6 рулонов</li>
-                        <li>Срок поставки: 6–15 дней</li>
+                        <li>Состав: {data?.composition}</li>
+                        <li>Плотность: {data?.weight} г/м²</li>
+                        <li>Ширина: {data?.width} см</li>
+                        <li>Длина за кг: {data?.length_per_kg} м/кг</li>
+                        <li>Минимальный заказ: {data?.minimum_order}</li>
+                        <li>Срок поставки: {data?.delivery_time} дней</li>
                     </ul>
                     <ul className='product-info__delivery-info-list'>
                         <li><CarIcon/> Быстрая доставка</li>

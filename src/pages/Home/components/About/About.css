@@ -1,8 +1,8 @@
-.about{
+.about {
     padding: 140px 0;
 }
 
-.about__title{
+.about__title {
     margin-bottom: 36px;
     font-family: 'Pliska';
     font-style: italic;
@@ -15,34 +15,34 @@
     margin-left: 17px;
 }
 
-.about__arrow-icon path{
-    stroke: var(--black) ;
+.about__arrow-icon path {
+    stroke: var(--black);
 }
 
-.about__container{
+.about__container {
     display: flex;
     justify-content: space-between;
 }
 
-.about__heading{
+.about__heading {
     margin-bottom: 5px;
     font-style: normal;
-    font-weight: revert;
+    font-weight: 500;
     font-size: 24px;
     line-height: 30px;
 }
 
-.about__desc{
+.about__desc {
     width: 535px;
     font-size: 16px;
     line-height: 26px;
 }
 
-.about__heading-wrapper{
+.about__heading-wrapper {
     margin-bottom: 40px;
 }
 
-.about__product-info{
+.about__product-info {
     display: flex;
     gap: 72px;
 }
@@ -53,10 +53,35 @@
     font-weight: 400;
 }
 
-.about__product-info p{
+.about__product-info p {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     opacity: 0.67;
     text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .about {
+        padding: 75px 0;
+    }
+    .about__container {
+        flex-direction: column;
+    }
+
+    .about__container div:nth-child(1) button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .about__title, .about__heading, .about__desc {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about__product-info {
+        flex-direction: column;
+        align-items: center;
+    }
 }
