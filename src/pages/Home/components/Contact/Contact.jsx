@@ -18,8 +18,7 @@ const Contact = () => {
             phone_number: phone_number.value,
             text: text.value
         }
-        const data = await axios.post(API+ '/applications', request)
-        console.log(data.data)
+        const data = await axios.post(API+ '/applications/', request)
     }
     return (
         <section className='contact'>
