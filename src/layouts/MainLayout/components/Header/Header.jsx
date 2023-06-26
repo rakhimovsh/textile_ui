@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as DotMenu} from 'src/assets/images/dot-menu.svg'
 import {ReactComponent as Logo} from 'src/assets/images/logo.svg'
@@ -11,9 +12,10 @@ import Sidebar from "src/layouts/MainLayout/components/Sidebar/Sidebar.jsx";
 const Header = ({lightTheme = false}) => {
     const [navbar, setNavbar] = useState(lightTheme)
     const [sidebar, setSidebar] = useState(false)
-    const location = useLocation()
+    const {pathname} = useLocation()
+    const navigate = useNavigate()
     const changeBackground = () => {
-        if (window.scrollY >= 66 || location.pathname !== '/') {
+        if (window.scrollY >= 66 || pathname !== '/') {
             setNavbar(true)
         } else {
             setNavbar(false)
@@ -24,6 +26,16 @@ const Header = ({lightTheme = false}) => {
         changeBackground()
         window.addEventListener("scroll", changeBackground)
     })
+
+    const handleClick = () => {
+        navigate('/')
+        setTimeout(() => {
+            const element = document.getElementById('products');
+            if (element) {
+                element.scrollIntoView();
+            }
+        }, 0);
+    }
     return (
         <>
             <header className={`header${navbar ? ' active' : ''}`}>
@@ -33,13 +45,13 @@ const Header = ({lightTheme = false}) => {
                     </Link>
                     <nav className='header__nav'>
                         <div>
-                            <Button color={navbar ? 'black' : 'white'}><DotMenu
+                            <Button onClick={handleClick} color={navbar ? 'black' : 'white'}><DotMenu
                                 className={navbar ? 'catalog-icon black-dots' : 'catalog-icon'}/> Каталог</Button>
                             <ul className={`nav-list${navbar ? ' active' : ''}`}>
-                                <li><a className='header__link' href='#about'>О компании</a></li>
-                                <li><a className='header__link' href='/categories'> Сотрудничество</a></li>
-                                <li><a className='header__link' href='/categories'>Наши партнёры</a></li>
-                                <li><a className='header__link' href='/categories'>Контакты</a></li>
+                                <li><HashLink className='header__link' to='/#about'>О компании</HashLink></li>
+                                <li><HashLink className='header__link' to='/#contact'> Сотрудничество</HashLink></li>
+                                <li><HashLink className='header__link' to='/#partners'>Наши партнёры</HashLink></li>
+                                <li><HashLink className='header__link' to='/#contact'>Контакты</HashLink></li>
                             </ul>
                         </div>
                         <div className='header__btn-wrapper'>

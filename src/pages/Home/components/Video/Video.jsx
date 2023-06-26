@@ -4,7 +4,7 @@ import MockVideo from 'src/assets/images/mock-video.jpg'
 
 const Video = () => {
     return (
-        <section className='video'>
+        <section className='video' id='about'>
             <div className='container video__container'>
                 <div className='video__desc'>
                     <p>Magic Materials — производитель текстиля и фурнитуры из Китая с доставкой по всей РФ и странам

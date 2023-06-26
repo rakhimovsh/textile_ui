@@ -1,7 +1,9 @@
 import './Catalog.css'
+import {useNavigate} from "react-router-dom";
 
 
 const Catalog = () => {
+    const navigate = useNavigate()
     return (
         <section className='catalog'>
             <div className='container catalog__container'>
@@ -12,7 +14,7 @@ const Catalog = () => {
                     </p>
                 </div>
                 <ul className='catalog__list'>
-                    <li className='catalog__item'>
+                    <li className='catalog__item' onClick={() => navigate('products')}>
                         <span>
                             01
                         </span>
@@ -23,7 +25,7 @@ const Catalog = () => {
                             24895 продуктов
                         </p>
                     </li>
-                    <li className='catalog__item'>
+                    <li className='catalog__item' onClick={() => navigate('products')}>
                         <span>
                             02
                         </span>
@@ -34,7 +36,7 @@ const Catalog = () => {
                             24895 продуктов
                         </p>
                     </li>
-                    <li className='catalog__item'>
+                    <li className='catalog__item' onClick={() => navigate('products')}>
                         <span>
                             03
                         </span>
@@ -45,7 +47,7 @@ const Catalog = () => {
                             24895 продуктов
                         </p>
                     </li>
-                    <li className='catalog__item'>
+                    <li className='catalog__item' onClick={() => navigate('products')}>
                         <span>
                             04
                         </span>

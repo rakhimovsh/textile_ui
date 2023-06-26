@@ -5,6 +5,7 @@ import {ReactComponent as Instagram} from 'src/assets/images/instagramm-icon.svg
 import {ReactComponent as Facebook} from 'src/assets/images/facebook-icon.svg'
 import {ReactComponent as Whatsapp} from 'src/assets/images/whatsapp-icon.svg'
 import {ReactComponent as Logo} from 'src/assets/images/logo.svg'
+import {HashLink} from "react-router-hash-link";
 
 const Footer = () => {
     return (
@@ -34,10 +35,10 @@ const Footer = () => {
                     </Link>
                     <div className='footer__nav'>
                         <ul className='footer__nav-list'>
-                            <li><Link to='/categories'>О компании</Link></li>
-                            <li><Link to='/categories'>Сотрудничество</Link></li>
-                            <li><Link to='/categories'>Наши партнёры</Link></li>
-                            <li><Link to='/categories'>Контакты</Link></li>
+                            <li><HashLink to='/#about'>О компании</HashLink></li>
+                            <li><HashLink to='/#contact'>Сотрудничество</HashLink></li>
+                            <li><HashLink to='/#partners'>Наши партнёры</HashLink></li>
+                            <li><HashLink to='/#contact'>Контакты</HashLink></li>
                         </ul>
                         <div className='footer__info'>
                             <div className='footer__summary'>

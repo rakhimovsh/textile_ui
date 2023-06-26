@@ -2,14 +2,16 @@ import './Hero.css'
 import Button from "src/components/Button/Button.jsx";
 
 import {ReactComponent as ArrowRight} from 'src/assets/images/arrow-right.svg'
+import {useNavigate} from "react-router-dom";
 
 const Hero = () => {
+    const navigate = useNavigate()
     return (
         <section className='hero'>
             <div className='container hero__container'>
                 <h1 className='hero__title'>
                     Трикотажное плотно в заказ в необходимом количестве
-                    <Button color='green'>заказать <ArrowRight className='hero__arrow-icon'/></Button>
+                    <Button onClick={()=> navigate('products')} color='green'>заказать <ArrowRight className='hero__arrow-icon'/></Button>
                 </h1>
             </div>
             <div className='hero__bg'></div>

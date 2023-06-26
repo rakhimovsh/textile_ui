@@ -26,7 +26,7 @@ const Products = () => {
         })
     }
     return (
-        <section className='products'>
+        <section className='products' id='products'>
             <div className='container products__container'>
                 <h2 className='products__title'>Наши продукции</h2>
                 <ul className='products__category-list'>

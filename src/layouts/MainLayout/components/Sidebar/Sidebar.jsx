@@ -1,9 +1,13 @@
+import {HashLink} from "react-router-hash-link";
 import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as Close} from "src/assets/images/close.svg";
 import './Sidebar.css'
 
 
 const Sidebar = ({sidebar, setSidebar}) => {
+    const handleLinks = () => {
+        setSidebar(false)
+    }
     return (
         <div className={`sidebar${sidebar ? ' open' : ''}`}>
             <div className='sidebar__header'>
@@ -12,19 +16,19 @@ const Sidebar = ({sidebar, setSidebar}) => {
             </div>
             <ul className='sidebar__list'>
                 <li>
-                    <a href='#catalog'>Каталог</a>
+                    <HashLink onClick={handleLinks} to='/#catalog'>Каталог</HashLink>
                 </li>
                 <li>
-                    <a href='#about'> - О компании</a>
+                    <HashLink onClick={handleLinks} to='/#about'> - О компании</HashLink>
                 </li>
                 <li>
-                    <a href='#'>Сотрудничество</a>
+                    <HashLink onClick={handleLinks} to='/#contact'>Сотрудничество</HashLink>
                 </li>
                 <li>
-                    <a>Наши партнёры</a>
+                    <HashLink onClick={handleLinks} to='/#partners'>Наши партнёры</HashLink>
                 </li>
                 <li>
-                    <a>Контакты</a>
+                    <HashLink onClick={handleLinks} to='/#contact'>Контакты</HashLink>
                 </li>
             </ul>
         </div>

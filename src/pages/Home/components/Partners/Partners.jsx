@@ -6,7 +6,7 @@ import {ReactComponent as Partner3} from "src/assets/images/partner-3.svg"
 
 const Partners = () => {
     return (
-        <section className='partners'>
+        <section className='partners' id='partners'>
             <div className='container'>
                 <h2 className='partners__title'>
                     Наши партнёры
