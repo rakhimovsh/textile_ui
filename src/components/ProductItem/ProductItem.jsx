@@ -5,7 +5,7 @@ const ProductItem = ({product}) => {
     const navigate = useNavigate()
     return (
         <div className='products-item' onClick={() => navigate('/product/' + product?.id)}>
-            <img src={'https://picsum.photos/500'} alt='product image'/>
+            <img src={product.image_1} alt='product image'/>
             <div>
                 <h4>
                     {product?.name}
