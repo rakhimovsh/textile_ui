@@ -19,10 +19,10 @@ const ProductInfo = () => {
         setImages(
             Array.from(Array(5).keys()).map((id) => ({
                 id: id + 1,
-                url: data[`image_${id + 1}`]
+                url: data &&    data[`image_${id + 1}`]
             }))
         );
-    }, []);
+    }, [data]);
     return (
         <section>
             <div className='container product-info__container'>
