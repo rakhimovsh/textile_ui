@@ -56,7 +56,7 @@ const Carousel = ({images= []}) =>{
             <div className="carousel">
                 <div className="carousel__images">
                     {images &&
-                        images.map((image, idx) => (
+                        images?.map((image, idx) => (
                             <div
                                 onClick={() => handleSelectedImageChange(idx)}
                                 style={{ backgroundImage: `url(${image.url})` }}

@@ -19,7 +19,7 @@ const ProductInfo = () => {
         setImages(
             Array.from(Array(5).keys()).map((id) => ({
                 id: id + 1,
-                url: `image_${id + 1}`
+                url: data[`image_${id + 1}`]
             }))
         );
     }, []);
