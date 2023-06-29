@@ -14,7 +14,7 @@ const RecommendedProducts = () => {
                 </h2>
                 <div className='recommended-products__list'>
                     {
-                        products && products.slice(0, 16).map(product => (
+                        products && products?.slice(0, 16)?.map(product => (
                             <ProductItem product={product} key={product?.id}/>
                         ))
                     }
