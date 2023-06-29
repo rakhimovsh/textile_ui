@@ -13,13 +13,13 @@ import useFetch from "src/hooks/useFetch.js";
 const ProductInfo = () => {
     const {productId} = useParams()
     const [images, setImages] = useState();
-    const {data} = useFetch('/products/' + productId)
+    const {data} = useFetch('/products/' + productId + "/")
 
     useEffect(() => {
         setImages(
             Array.from(Array(5).keys()).map((id) => ({
                 id: id + 1,
-                url: data &&    data[`image_${id + 1}`]
+                url: data && data[`image_${id + 1}`]
             }))
         );
     }, [data]);

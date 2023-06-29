@@ -4,7 +4,7 @@ import './RecommendedProducts.css'
 
 
 const RecommendedProducts = () => {
-    const {data: products} = useFetch('/products')
+    const {data: products} = useFetch('/products/')
 
     return (
         <section className='recommended-products'>
