@@ -19,6 +19,7 @@
 
 @media screen and (max-width: 670px) {
     .recommended-products__list {
+        row-gap: 50px;
         grid-template-columns: repeat(auto-fill, minmax(173px, 1fr));
     }
 }

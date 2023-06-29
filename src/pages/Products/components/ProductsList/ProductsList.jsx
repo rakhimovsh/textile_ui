@@ -7,8 +7,8 @@ import {useState} from "react";
 const ProductsList = () => {
     const [activeCategory, setActiveCategory] = useState(null)
 
-    const {data: categories} = useFetch('/categories')
-    const {data: products} = useFetch('/products')
+    const {data: categories} = useFetch('/categories/')
+    const {data: products} = useFetch('/products/')
     const onCategoryClicked = (categoryId = null) => {
         setActiveCategory(categoryId ? categoryId : null)
     }

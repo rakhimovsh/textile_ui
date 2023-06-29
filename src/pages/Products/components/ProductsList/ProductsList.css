@@ -13,5 +13,6 @@
 @media screen and (max-width: 670px) {
     .products-list_ .grid {
         grid-template-columns: repeat(auto-fill, minmax(173px, 1fr));
+        row-gap: 50px;
     }
 }

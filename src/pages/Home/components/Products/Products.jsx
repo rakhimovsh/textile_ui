@@ -1,17 +1,17 @@
 import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 import ProductItem from "src/components/ProductItem/ProductItem.jsx";
 import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as ArrowRight} from 'src/assets/images/arrow-right.svg'
-import './Products.css'
 import useFetch from "src/hooks/useFetch.js";
-import {useState} from "react";
+import './Products.css'
 
 
 const Products = () => {
     const navigate = useNavigate()
     const [activeCategory, setActiveCategory] = useState(null)
-    const {data: categories} = useFetch('/categories')
-    const {data: products} = useFetch('/products')
+    const {data: categories} = useFetch('/categories/')
+    const {data: products} = useFetch('/products/')
     const onCategoryClicked = (categoryId = null) => {
         setActiveCategory(categoryId ? categoryId : null)
     }

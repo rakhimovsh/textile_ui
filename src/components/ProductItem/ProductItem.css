@@ -16,6 +16,9 @@
 }
 
 .products-item img{
+    max-width: 317px;
+    height: 418px;
+    object-fit: cover;
     transition: all 0.3s ease;
 }
 .products-item img:hover{
@@ -23,7 +26,8 @@
 }
 
 @media screen and (max-width: 670px) {
-    .products-item img, products-item{
+    .products-item img, .products-item{
+        height: 214px;
         width: 173px
     }
 
