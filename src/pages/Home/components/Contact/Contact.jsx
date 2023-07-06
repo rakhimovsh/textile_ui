@@ -1,14 +1,20 @@
 import axios from "axios";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Input from "src/components/Input/Input";
 import PhoneInput from "src/components/PhoneInput/PhoneInput";
 import Button from "src/components/Button/Button.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {ReactComponent as ArrowRight} from "src/assets/images/arrow-right.svg";
 import {API} from "src/config/config.js";
 import './Contact.css'
 
 
 const Contact = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     const [loading, setLoading] = useState(false)
     const [status, setStatus] = useState(null)
 
@@ -43,7 +49,7 @@ const Contact = () => {
     return (
         <section className='contact' id='contact'>
             <div className="container contact__container">
-                <div className="contact__main">
+                <div className="contact__main" data-aos="fade-right" data-aos-duration="1000">
                     <h2>
                         Оставьте свой контакт, и мы вам перезвоним
                     </h2>

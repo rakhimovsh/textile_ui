@@ -1,5 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
+
+import "aos/dist/aos.css";
 import ProductItem from "src/components/ProductItem/ProductItem.jsx";
 import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as ArrowRight} from 'src/assets/images/arrow-right.svg'
@@ -8,6 +10,7 @@ import './Products.css'
 
 
 const Products = () => {
+    
     const navigate = useNavigate()
     const [activeCategory, setActiveCategory] = useState(null)
     const {data: categories} = useFetch('/categories/')
@@ -43,7 +46,7 @@ const Products = () => {
                 <div className='products-list'>
                     {
                         products && sortProducts().map(product => (
-                            <ProductItem product={product} key={product?.id}/>
+                            <ProductItem   product={product} key={product?.id}/>
                         ))
                     }
                 </div>

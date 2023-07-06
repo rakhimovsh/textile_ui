@@ -1,5 +1,7 @@
-import {useRef, useState} from "react";
+import {useRef, useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import MaterialImg from 'src/assets/images/material-img.jpg'
 import TShirtImg from 'src/assets/images/t-shirt-img.jpg'
@@ -9,6 +11,10 @@ import './Catalog.css'
 
 
 const Catalog = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     const navigate = useNavigate()
     const [imageStyle, setImageStyle] = useState({});
     const wrapperRef_1 = useRef(null)
@@ -28,7 +34,7 @@ const Catalog = () => {
     return (
         <section className='catalog'>
             <div className='container catalog__container'>
-                <div>
+                <div data-aos="fade-right">
                     <h2 className='catalog__title'>Каталог продуктов</h2>
                     <p className='catalog__desc'>
                         Magic Materials — производитель текстиля и фурнитуры из Китая с доставкой по всей РФ и странам

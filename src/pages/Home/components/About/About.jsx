@@ -2,9 +2,17 @@ import './About.css'
 import Button from "src/components/Button/Button.jsx";
 import {ReactComponent as ArrowRight} from "src/assets/images/arrow-right.svg";
 import CountUp from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 
 const About = () => {
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <section className='about'>
             <div className='container about__container'>
@@ -15,7 +23,7 @@ const About = () => {
                     <Button color='black'>Подробнее о компании <ArrowRight className='about__arrow-icon'/></Button>
                 </div>
                 <div>
-                    <div className='about__heading-wrapper'>
+                    <div className='about__heading-wrapper' data-aos="fade-left">
                         <h3 className='about__heading'>
                             Надёжный поставщик
                         </h3>
@@ -23,7 +31,7 @@ const About = () => {
                             Мы производим ткань по современным технологиям и на актуальных станках. Обеспечим любой объёми сложность заказа ткани.
                         </p>
                     </div>
-                    <div className='about__heading-wrapper'>
+                    <div className='about__heading-wrapper' data-aos="fade-left">
                         <h3 className='about__heading'>
                             Контроль качества
                         </h3>
@@ -34,7 +42,7 @@ const About = () => {
                     <div className='about__product-info'>
                        <div>
                            <h3>
-                               +<CountUp end={467} duration={3}/>
+                               +<CountUp end={467} duration={4}/>
                            </h3>
                            <p>
                                ткацких станков
@@ -42,7 +50,7 @@ const About = () => {
                        </div>
                         <div>
                             <h3>
-                                +<CountUp end={13} duration={3}/>
+                                +<CountUp end={13} duration={4}/>
                             </h3>
                             <p>
                                 лет на рынке
@@ -50,7 +58,7 @@ const About = () => {
                         </div>
                         <div>
                             <h3>
-                                +<CountUp end={89} duration={3}/>
+                                +<CountUp end={89} duration={4}/>
                             </h3>
                             <p>
                                 тонн сырья в сутки
