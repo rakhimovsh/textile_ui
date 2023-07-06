@@ -42,7 +42,7 @@ const About = () => {
                     <div className='about__product-info'>
                        <div>
                            <h3>
-                               +<CountUp end={467} duration={4}/>
+                               +<CountUp  end={467} duration={7}/>
                            </h3>
                            <p>
                                ткацких станков
@@ -50,7 +50,7 @@ const About = () => {
                        </div>
                         <div>
                             <h3>
-                                +<CountUp end={13} duration={4}/>
+                                +<CountUp end={13} duration={7}/>
                             </h3>
                             <p>
                                 лет на рынке
@@ -58,7 +58,7 @@ const About = () => {
                         </div>
                         <div>
                             <h3>
-                                +<CountUp end={89} duration={4}/>
+                                +<CountUp end={89} duration={7}/>
                             </h3>
                             <p>
                                 тонн сырья в сутки

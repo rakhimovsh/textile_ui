@@ -10,7 +10,7 @@ const ProductItem = ({product}) => {
     }, []);
     const navigate = useNavigate()
     return (
-        <div className='products-item' data-aos="flip-left" onClick={() => navigate('/product/' + product?.id)}>
+        <div className='products-item' data-aos="flip-left" data-aos-duration="1000" onClick={() => navigate('/product/' + product?.id)}>
             <img src={product?.image_1} alt='product image'/>
             <div>
                 <h4>
