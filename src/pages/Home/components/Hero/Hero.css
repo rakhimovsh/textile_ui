@@ -16,7 +16,8 @@
     vertical-align: middle;
     z-index: 99;
 }
-.hero__title button{
+
+.hero__title button {
     margin-top: 30px;
     display: block;
 }
@@ -42,14 +43,20 @@
     margin-bottom: 40px;
 }
 
-.btn1{
-    padding: 10px 15px;
+.btn1 {
+    position: relative;
     cursor: pointer;
     border-radius: 50%;
-    border: 2px solid #FFFFFF;
+    border: none;
     background-color: transparent;
     color: #FFFFFF;
     font-weight: 500;
+}
+
+.btn1 p {
+    position: absolute;
+    top: 13px;
+    left: 15px;
 }
 
 
@@ -63,13 +70,45 @@
     margin-left: 45px;
 }
 
+.svg {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+}
+
+.anima {
+    animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
+}
+
 @media screen and (max-width: 1015px) {
     .hero__title {
         margin-top: 176px;
         margin-bottom: 77px;
     }
 
-   
+
 }
 
 @media screen and (max-width: 490px) {
@@ -83,6 +122,7 @@
         text-align: center;
         width: 100%;
     }
+
     /* .hero__bg{
         height: 247px;
     } */
@@ -92,7 +132,7 @@
         width: 100%;
     }
 
-    .hero__title button{
+    .hero__title button {
         margin-top: 21px;
         margin-left: 0;
     }
