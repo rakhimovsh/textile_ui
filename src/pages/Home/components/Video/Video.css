@@ -21,7 +21,7 @@
     line-height: 33px;
 }
 
-.video__desc span {
+.video__desc .more {
     margin-top: auto;
     font-size: 12px;
     line-height: 14px;
@@ -47,9 +47,10 @@
 }
 
 @media screen and (max-width: 1025px) {
-    .video{
+    .video {
         padding: 50px 0;
     }
+
     .video__container {
         grid-template-columns: 1fr;
     }
@@ -59,15 +60,25 @@
     }
 }
 
+@media screen and (max-width: 660px) {
+    .hide {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .video__desc {
         height: 470px;
         padding: 46px 30px 40px 20px;
     }
-    .video__desc p{
+
+    .video__desc p {
         font-size: 16px;
     }
+
     .video__desc h2 {
         font-size: 44px;
     }
+
+
 }

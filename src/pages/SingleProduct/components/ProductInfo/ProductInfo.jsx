@@ -1,19 +1,20 @@
-import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Carousel from "src/components/Carousel/Carousel.jsx";
 import Button from "src/components/Button/Button.jsx";
-import {ReactComponent as ArrowRight} from "src/assets/images/arrow-right.svg";
-import {ReactComponent as CarIcon} from "src/assets/images/car-icon.svg";
-import {ReactComponent as ShieldIcon} from "src/assets/images/shield-icon.svg";
-import {ReactComponent as ListIcon} from "src/assets/images/list-icon.svg";
+import { ReactComponent as ArrowRight } from "src/assets/images/arrow-right.svg";
+import { ReactComponent as CarIcon } from "src/assets/images/car-icon.svg";
+import { ReactComponent as ShieldIcon } from "src/assets/images/shield-icon.svg";
+import { ReactComponent as ListIcon } from "src/assets/images/list-icon.svg";
 import './ProductInfo.css'
 import useFetch from "src/hooks/useFetch.js";
 
 
 const ProductInfo = () => {
-    const {productId} = useParams()
+    const { productId } = useParams()
     const [images, setImages] = useState();
-    const {data} = useFetch('/products/' + productId + "/")
+    const navigate = useNavigate()
+    const { data } = useFetch('/products/' + productId + "/")
 
     useEffect(() => {
         setImages(
@@ -23,11 +24,20 @@ const ProductInfo = () => {
             }))
         );
     }, [data]);
+    const handleClick = () => {
+        navigate('/')
+        setTimeout(() => {
+            const element = document.getElementById('contact');
+            if (element) {
+                element.scrollIntoView();
+            }
+        }, 0);
+    }
     return (
         <section>
             <div className='container product-info__container'>
                 <div className="carousel-wrapper">
-                    <Carousel images={images}/>
+                    <Carousel images={images} />
                 </div>
                 <div className='product-info__desc'>
                     <h2>{data?.name}</h2>
@@ -40,11 +50,11 @@ const ProductInfo = () => {
                         <li>Срок поставки: {data?.delivery_time} дней</li>
                     </ul>
                     <ul className='product-info__delivery-info-list'>
-                        <li><CarIcon/> Быстрая доставка</li>
-                        <li><ShieldIcon/> Гарантия качества</li>
-                        <li><ListIcon/> 50% авансовый платёж, остаток <br/> при получении</li>
+                        <li><CarIcon /> Быстрая доставка</li>
+                        <li><ShieldIcon /> Гарантия качества</li>
+                        <li><ListIcon /> 50% авансовый платёж, остаток <br /> при получении</li>
                     </ul>
-                    <Button color='black'>заказать <ArrowRight className='product-info__btn-icon'/></Button>
+                    <Button color='black' onClick={handleClick}>заказать <ArrowRight className='product-info__btn-icon' /></Button>
                 </div>
             </div>
         </section>

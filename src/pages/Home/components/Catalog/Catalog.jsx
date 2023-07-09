@@ -1,5 +1,5 @@
-import {useRef, useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
+import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -26,10 +26,10 @@ const Catalog = () => {
         const rect = refs[index - 1].current.getBoundingClientRect();
         const x = e.clientX - rect.left - 220; // get cursor position
         const y = e.clientY - rect.top - 80;
-        setImageStyle({[index]: {left: x, top: y, display: 'block'}});
+        setImageStyle({ [index]: { left: x, top: y, display: 'block' } });
     };
     const handleMouseLeave = (index) => {
-        setImageStyle({[index]: {display: 'none'}}); // update image style to hide it
+        setImageStyle({ [index]: { display: 'none' } }); // update image style to hide it
     };
     return (
         <section className='catalog'>
@@ -37,7 +37,14 @@ const Catalog = () => {
                 <div data-aos="fade-right">
                     <h2 className='catalog__title'>Каталог продуктов</h2>
                     <p className='catalog__desc'>
-                        Magic Materials — производитель текстиля и фурнитуры из Китая с доставкой по всей РФ и странам
+                        Добро пожаловать в каталог продуктов HU ONE collection -
+                        ведущего производителя текстильных тканей из Китая.
+                        <br />
+                        <br />
+                        Мы гордимся способностью доставлять нашу высококачественную продукцию по всему миру.
+                        Наши текстильные материалы представляют широкий ассортимент, включая прекрасно сотканные ткани из разных волокон. От элегантных хлопчатобумажных тканей до натуральных льняных материалов и теплых шерстяных тканей, мы предлагаем разнообразие опций, чтобы удовлетворить самые изысканные вкусы наших клиентов.
+                        <br />
+                        Мы стремимся предоставить нашим клиентам превосходное качество, надежность и уверенность в каждой поставке. Наши товары проходят тщательный контроль качества, чтобы гарантировать, что каждый продукт, достигающий ваших рук, соответствует самым высоким стандартам.
                     </p>
                 </div>
                 <ul className='catalog__list'>
@@ -46,8 +53,8 @@ const Catalog = () => {
                         onMouseLeave={() => handleMouseLeave("1")}>
                         <div>
                             <span>
-                            01
-                        </span>
+                                01
+                            </span>
                             <h3>
                                 Материалы
                             </h3>
@@ -67,8 +74,8 @@ const Catalog = () => {
                         onMouseLeave={() => handleMouseLeave("2")}>
                         <div>
                             <span>
-                            02
-                        </span>
+                                02
+                            </span>
                             <h3>
                                 Футболки
                             </h3>
@@ -88,8 +95,8 @@ const Catalog = () => {
                         onMouseLeave={() => handleMouseLeave("3")}>
                         <div>
                             <span>
-                            03
-                        </span>
+                                03
+                            </span>
                             <h3>
                                 Худи
                             </h3>
@@ -109,8 +116,8 @@ const Catalog = () => {
                         onMouseLeave={() => handleMouseLeave("4")}>
                         <div>
                             <span>
-                            04
-                        </span>
+                                04
+                            </span>
                             <h3>
                                 Шорты
                             </h3>

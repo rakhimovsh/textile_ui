@@ -1,37 +1,37 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Footer.css'
-import {ReactComponent as Telegram} from 'src/assets/images/telegram-icon.svg'
-import {ReactComponent as Instagram} from 'src/assets/images/instagramm-icon.svg'
-import {ReactComponent as Facebook} from 'src/assets/images/facebook-icon.svg'
-import {ReactComponent as Whatsapp} from 'src/assets/images/whatsapp-icon.svg'
-import {ReactComponent as Logo} from 'src/assets/images/logo.svg'
-import {HashLink} from "react-router-hash-link";
+import { ReactComponent as Telegram } from 'src/assets/images/telegram-icon.svg'
+import { ReactComponent as Instagram } from 'src/assets/images/instagramm-icon.svg'
+import { ReactComponent as Facebook } from 'src/assets/images/facebook-icon.svg'
+import { ReactComponent as Whatsapp } from 'src/assets/images/whatsapp-icon.svg'
+import { ReactComponent as Logo } from 'src/assets/images/logo.svg'
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
     return (
         <footer className='footer'>
-            <div className='footer__top'>
+            <div className='footer__top' id="contact_us">
                 <div className='footer__contact container'>
                     <div>
                         <span className='footer__contact-desc'>Для вопросов о сотрудничестве и заказе</span>
-                        <p>user@gmail.com</p>
+                        <p>Huonecollection@gmail.com</p>
                     </div>
                     <div>
                         <span className='footer__contact-desc'>Написать нам в мессенджерах или позвонить</span>
-                        <p>+998 90 003 65 62</p>
+                        <a className="tell" href="tel:+998941680000">+99894 168 00 00</a>
                     </div>
                     <div className='footer__network'>
-                        <a href='#'><span className='icon'><Telegram/></span></a>
-                        <a href='#'><span className='icon'><Instagram/></span></a>
-                        <a href='#'><span className='icon'><Facebook/></span></a>
-                        <a href='#'><span className='icon'><Whatsapp/></span></a>
+                        <a href='https://t.me/huone_collection' target="_blank"><span className='icon'><Telegram /></span></a>
+                        <a href='https://instagram.com/huone_collection?igshid=MzRlODBiNWFlZA==' target="_blank"><span className='icon'><Instagram /></span></a>
+                        <a href='https://instagram.com/huone_collection?igshid=MzRlODBiNWFlZA==' target="_blank"><span className='icon'><Facebook /></span></a>
+                        {/* <a href='#' target="_blank"><span className='icon'><Whatsapp /></span></a> */}
                     </div>
                 </div>
             </div>
             <div className='footer__bottom'>
                 <div className='container footer__bottom-container'>
                     <Link className='footer__logo' to='/' >
-                        <Logo/>
+                        <Logo />
                     </Link>
                     <div className='footer__nav'>
                         <ul className='footer__nav-list'>
@@ -45,7 +45,7 @@ const Footer = () => {
                                 <p className="shadow">Copyright ©2023</p>
                                 <p className="shadow">All rights received</p>
                             </div>
-                            <p style={{color: "white"}}><span className="shadow">Created by :</span> S-orca </p>
+                            <p style={{ color: "white" }}><span className="shadow">Created by :</span> S-orca </p>
                         </div>
                     </div>
                 </div>

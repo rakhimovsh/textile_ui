@@ -5,7 +5,7 @@
 
 .footer__bottom {
     padding-top: 60px;
-    padding-bottom: 35px;
+    padding-bottom: 50px;
     background-color: var(--bg-color);
 }
 
@@ -23,7 +23,9 @@
     font-size: 13px;
 }
 
-.footer__contact p {
+.footer__contact p,
+.tell {
+    display: block;
     font-size: 24px;
     font-weight: 500;
 }
@@ -80,7 +82,8 @@
     opacity: 0.2;
 }
 
-.footer__info, .footer__info div {
+.footer__info,
+.footer__info div {
     display: flex;
     align-items: center;
 }
@@ -106,9 +109,10 @@
 }
 
 @media screen and (max-width: 600px) {
-    .footer__bottom{
+    .footer__bottom {
         padding: 36px 50px 50px;
     }
+
     .footer__logo {
         margin: 0;
     }
