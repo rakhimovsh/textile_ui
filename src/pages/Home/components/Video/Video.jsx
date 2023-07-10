@@ -14,7 +14,7 @@ const Video = () => {
         <section className='video' id='about'>
             <div className='container video__container'>
                 <div className='video__desc'>
-                    <p>Huone collection
+                    <p><b style={{ fontSize: 18 }}>HU ONE</b> collection
                         является ведущими производителями тканей, использующими современные технологии и передовые станки. Наша компания гордится своей способностью выполнить заказы любого объема и сложности, обеспечивая высокое качество продукции.
 
                         Контроль качества - наш приоритет

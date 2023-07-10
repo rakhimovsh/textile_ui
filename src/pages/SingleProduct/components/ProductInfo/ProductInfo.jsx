@@ -29,7 +29,7 @@ const ProductInfo = () => {
         setTimeout(() => {
             const element = document.getElementById('contact');
             if (element) {
-                element.scrollIntoView();
+                element.scrollIntoView({ block: "end" })
             }
         }, 0);
     }

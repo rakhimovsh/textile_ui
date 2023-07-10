@@ -64,7 +64,7 @@ const Contact = () => {
                         </div>
                     </form>
                 </div>
-                <div className="contact__map">
+                <div className="contact__map" id="map">
                     <a href='https://goo.gl/maps/6DcV2dv4b2kK8Lo49' target="_blank">
                         <div className='contact__map-image'>
 

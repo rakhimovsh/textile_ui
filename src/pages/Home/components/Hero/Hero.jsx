@@ -35,7 +35,7 @@ const Hero = () => {
         <section className='hero'>
             <div className='container hero__container' >
                 <h1 className='hero__title'>
-                    Трикотажное изделия и полотно на заказ
+                    Трикотажные изделия и полотно на заказ
                     <Button onClick={() => navigate('products')} color='green'>Подробнее <ArrowRight className='hero__arrow-icon' /></Button>
                 </h1>
                 <div className='carusel_btns'>
